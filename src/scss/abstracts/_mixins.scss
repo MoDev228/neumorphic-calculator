@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+@mixin neumorphic {
+  box-shadow:
+    -8px -8px 16px $shadow-light,
+     8px  8px 16px $shadow-dark;
+}
+
+@mixin neumorphic-inset {
+  box-shadow:
+    inset -6px -6px 12px $shadow-light,
+    inset  6px  6px 12px $shadow-dark;
+}

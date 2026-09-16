@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Mo-Calc, une calculatrice web avec une interface neumorphique."
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/calculator-solid-full.svg"
+    />
+
+    <title>Mo-Calc | Calculatrice</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="calculator-section" aria-labelledby="calculator-title">
+        <div class="calculator">
+          <header class="calculator__header">
+            <h1 id="calculator-title">Mo-Calc</h1>
+            <div class="calculator__clock" aria-label="Heure actuelle">
+              <time class="calculator__time">00:00:00</time>
+            </div>
+          </header>
+
+          <div
+            class="calculator__display"
+            role="status"
+            aria-live="polite"
+            aria-label="Écran de la calculatrice"
+          >
+            <span class="calculator__expression"></span>
+            <output class="calculator__result">0</output>
+          </div>
+
+          <div class="calculator__buttons">
+            <button
+              type="button"
+              class="calculator__button calculator__button--action"
+              data-action="clear"
+              aria-label="Effacer"
+            >
+              AC
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--action"
+              data-action="delete"
+              aria-label="Supprimer le dernier caractère"
+            >
+              DEL
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--action"
+              data-action="percentage"
+              aria-label="Pourcentage"
+            >
+              %
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--operator"
+              data-operator="/"
+              aria-label="Division"
+            >
+              ÷
+            </button>
+
+            <button type="button" class="calculator__button" data-number="7">
+              7
+            </button>
+
+            <button type="button" class="calculator__button" data-number="8">
+              8
+            </button>
+
+            <button type="button" class="calculator__button" data-number="9">
+              9
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--operator"
+              data-operator="*"
+              aria-label="Multiplication"
+            >
+              ×
+            </button>
+
+            <button type="button" class="calculator__button" data-number="4">
+              4
+            </button>
+
+            <button type="button" class="calculator__button" data-number="5">
+              5
+            </button>
+
+            <button type="button" class="calculator__button" data-number="6">
+              6
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--operator"
+              data-operator="-"
+              aria-label="Soustraction"
+            >
+              −
+            </button>
+
+            <button type="button" class="calculator__button" data-number="1">
+              1
+            </button>
+
+            <button type="button" class="calculator__button" data-number="2">
+              2
+            </button>
+
+            <button type="button" class="calculator__button" data-number="3">
+              3
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--operator"
+              data-operator="+"
+              aria-label="Addition"
+            >
+              +
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--zero"
+              data-number="0"
+            >
+              0
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button"
+              data-number="."
+              aria-label="Virgule"
+            >
+              .
+            </button>
+
+            <button
+              type="button"
+              class="calculator__button calculator__button--equals"
+              data-action="calculate"
+              aria-label="Calculer le résultat"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

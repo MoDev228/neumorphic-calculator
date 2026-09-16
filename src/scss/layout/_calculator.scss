@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as *;
+
+.calculator-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.calculator {
+  width: min(100%, 40rem);
+  padding: 2rem;
+   min-width: 0;
+  overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+  .calculator-section {
+    padding: 4rem;
+  }
+
+  .calculator {
+    width: min(100%, 45rem);
+  }
+}
+
+.calculator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

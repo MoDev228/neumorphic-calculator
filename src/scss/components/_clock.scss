@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.calculator__clock {
+  padding: 1.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1.6rem;
+
+  @include neumorphic;
+}
+
+.calculator__time {
+  color: $color-text;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.calculator__time.clock-update {
+  animation: clock-tick 0.3s ease;
+}
+
+@keyframes clock-tick {
+  0% {
+    opacity: 0.4;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
